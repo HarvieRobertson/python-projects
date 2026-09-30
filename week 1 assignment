@@ -1,0 +1,42 @@
+x= "I wanna be the best programmer in the world"
+y = 11.5
+z = 5
+print(f"the type of x is {type(x)}")
+print(f"the type of y is {type(y)}")
+print(f"the type of z is {type(z)}")
+result1 = y + z
+print (f"the result of y + z is {result1} and the type of result1 is {type(result1)}")
+result2 = y + int(z)
+print (f"the result of y + int(z) is {result2} and the type of result2 is {type(result2)}")
+z = str(z)
+print(f"the type of z is now {type(z)}")
+#we cannot add x and y unless we convert y to a string in which case the result would be
+result3 = x + str(y)
+print (f"the result of x + str(y) is {result3} and the type of result3 is {type(result3)}")
+
+print("")
+
+print(ord("b"))
+print(chr(99))
+print(ord("H"))
+
+print("")
+
+num1 = [1, 2, 3, 4, 5]
+print(dir(num1))
+# Tried help function but couldnt continue running code while the function was still running.
+
+print("")
+
+print(x)
+x = "Hello World"
+print(x)
+
+print("")
+
+new_num = 10
+new_num1 = 11
+result = new_num%2 == 0
+last_result = new_num1%2 == 0
+print(f"Is {new_num} an even number? {result}")
+print(f"Is {new_num1} an even number? {last_result}")
