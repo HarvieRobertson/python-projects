@@ -1,4 +1,4 @@
-"""
+
 def sales_prediction(sales):
     profit= sales*0.23
     print(f"Expected profit: ", profit)
@@ -25,12 +25,78 @@ def calc_area(a, b, c):
     Area = (s*((s - a)*(s - b)*(s - c))) ** 0.5
     print(f"Area: " , Area)
 calc_area(a, b, c)
-"""
+
 temperatures = [12, 15, 18, 21, 19, 16, 14, 11]
 def calculate_average(temperatures):
     total = 0
     for i in temperatures:
-        total = total + i
+        total += i
     average = total / len(temperatures) 
     return average
 print(calculate_average(temperatures))
+
+def find_highest(temperatures):
+    highest_temp = 0
+    for i in temperatures:
+        if i > highest_temp:
+            highest_temp = i
+    return highest_temp
+print(find_highest(temperatures))
+
+def find_lowest(temperatures):
+    lowest_temp = 1000
+    for i in temperatures:
+        if i < lowest_temp:
+            lowest_temp = i
+    return lowest_temp
+print(find_lowest(temperatures))
+
+def find_hot_days(temperatures):
+    hot_days = 0
+    for i in temperatures:
+        if i > 20:
+            hot_days += 1
+    return hot_days
+print(find_hot_days(temperatures))
+
+numbers = [3, 1, 5, 3, 2, 1]
+def unique_sorted(numbers):
+    sorted = []
+    for i in numbers:
+       if i not in sorted:
+           sorted.append(i)
+    sorted.sort(reverse = True)
+    return sorted
+print(unique_sorted(numbers))
+
+dup = [1, 2, 3, 1] 
+def contains_duplicate(dup):
+    count = 0
+    for i in dup:
+        count = 0
+        for j in dup:
+            if i == j:
+                count += 1
+        if count > 1:
+            return True
+            break
+        elif count == 1:
+            return False
+            continue
+print (contains_duplicate(dup))
+
+list1 = [1, 2, 45]
+list2 = [3, 5, 5]
+def max_difference(list1, list2):
+    max1 = max(list1)
+    max2 = max(list2)
+    min1 = min(list1)
+    min2 = min(list2)
+    bigger_max = max(max1, max2)
+    if bigger_max == max1:
+        smaller_min = min2
+    else:
+        smaller_min = min1
+    difference = bigger_max - smaller_min
+    return difference
+print(max_difference(list1, list2))
