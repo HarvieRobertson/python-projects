@@ -9,3 +9,11 @@ def fibonacci_iterative(n):
             total = prev + total
             prev = total - prev
     return total
+
+def fibonacci_recursive(n):
+   n= n-1
+    if n <= 1:
+        return n
+    else:
+        return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+print(fibonacci_recursive(n))
